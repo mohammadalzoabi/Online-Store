@@ -1,5 +1,9 @@
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
+const nodeMailer = require('nodemailer');
+const sendGridTransport = require('@sendgrid/mail');
+
+sendGridTransport.setApiKey('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');
 
 
 exports.getLogin = (req, res, next) => {
@@ -75,7 +79,6 @@ exports.postSignup = (req, res, next) => {
                 req.flash('error', 'An Account With That Email Already Exists.')
                 return res.redirect('/signup');
             }
-
             return bcrypt.hash(password, 12)
             .then(hashedPassword => {
                 const user = new User({
@@ -87,11 +90,18 @@ exports.postSignup = (req, res, next) => {
             })
             .then(result => {
                 res.redirect('/login');
-            });
+                const msg = {
+                    to: email,
+                    from: 'moalzoabi@outlook.com',
+                    subject: 'Signup Succeeded',
+                    html:'<h3>You successfully signed up</h3>'
+                  };
+                  return sendGridTransport.send(msg);
         })
         .catch(err => {
             console.log(err);
         })
+    })
 };
 
 exports.postLogout = (req, res, next) => {
