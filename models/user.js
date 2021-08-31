@@ -26,7 +26,15 @@ const userSchema = new Schema({
                  required: true
                 }
             }]
-        }
+        },
+
+    resetToken: {
+        type: String
+    },
+
+    resetTokenExp: {
+        type: Date
+    }
 
 });
 
