@@ -249,6 +249,28 @@ form {
   background: rgb(255, 176, 176);
 }
 
+.pagination {
+  text-align: center;
+  margin-top: 2rem;
+
+}
+
+.pagination a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem;
+  border: 2px solid blanchedalmond;
+  margin: 0 1rem;
+}
+
+.pagination a:hover,
+.pagination a:active,
+.pagination a.active {
+  background: blanchedalmond;
+  color: black;
+  border: 2px solid black;
+}
+
 @media (min-width: 768px) {
   .main-header__nav {
     display: flex;
