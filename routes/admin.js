@@ -30,7 +30,7 @@ router.post('/edit-product',
                             check('description').isLength({min:1,max:240}).withMessage('The discription cant have more than 240 characters').trim(),
             isAuth, adminController.postEditProduct);
 
-router.post('/delete-product', isAuth, adminController.postDeleteProduct);
+router.delete('/product/:productId', isAuth, adminController.deleteProduct);
 
 
 
