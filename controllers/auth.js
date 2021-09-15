@@ -5,7 +5,7 @@ const { validationResult } = require('express-validator/check')
 
 const crypto = require('crypto');
 
-sendGridTransport.setApiKey('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');
+sendGridTransport.setApiKey('Your_SendGrid_Key');
 
 
 exports.getLogin = (req, res, next) => {

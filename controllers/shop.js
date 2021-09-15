@@ -2,12 +2,12 @@ const fs = require('fs');
 const path = require('path');
 
 const PDFDocument = require('pdfkit');
-const stripe = require('stripe')('sk_test_51JYbgDDdNQdvCelbTnPRW2iatJ22lpR5L01bCGQnTppWXyILVq2H9uIXbxZcznaDMkiKYhyhawq9TTKkDR4jlLEe00vZbovUnk');
+const stripe = require('stripe')('Your_Stripe_Secret_Key');
 
 const Product = require('../models/product');
 const Order = require('../models/order');
 
-const ITEMS_PER_PAGE = 2;
+const ITEMS_PER_PAGE = 6;
 
 
 exports.getIndex = (req, res, next) => {
