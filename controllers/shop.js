@@ -161,7 +161,7 @@ exports.getCheckout = (req, res, next) => {
             return {
               name: p.productId.title,
               description: p.productId.description,
-              amount: p.productId.price * 100,
+              amount: Math.round(p.productId.price * 100),
               currency: 'usd',
               quantity: p.quantity
             };

@@ -130,7 +130,7 @@ exports.postSignup = (req, res, next) => {
                 res.redirect('/login');
                 const msg = {
                     to: email,
-                    from: 'moalzoabi@outlook.com',
+                    from: 'Your Email Here',
                     subject: 'Signup Succeeded',
                     html:'<h3>You successfully signed up</h3>'
                   };
