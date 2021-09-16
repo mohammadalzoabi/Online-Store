@@ -85,20 +85,20 @@ https://signup.sendgrid.com
 
 6- Open the project, head to `auth.js` and paste the key
 
-7- in `auth.js`, make sure to put the email you used in the `from` field inside of `postSignup` and `postReset`
+7- in `auth.js`, make sure to put the email you used to create the singe sender in the `from` field inside of `postSignup` and `postReset`
 
 
 ---
 
 ## Running The App
 
-1- Open the project and run `npm install` in th terminal
+1- Create a folder named `images` in the root directory of the project, reason being is that I can't commit an empty folder, so you you're gonna have to do it manually
 
-2- after its done, run `npm start`
+2- Open the project using vs code or whatever you prefer to use and run `npm install` in the terminal
 
-3- create a folder named `images` in the root directory, reason being is that I can't commit an empty folder, syou you're gonna have to do it manually
+3- after its done, run `npm start` in the terminal as well
 
-3- visit `localhost:3000` on your favourite browser and you're all set!
+4- visit `localhost:3000` on your favourite browser and you're all set!
 
 ---
 
