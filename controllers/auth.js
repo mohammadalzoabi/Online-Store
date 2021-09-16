@@ -186,7 +186,7 @@ exports.postReset = (req, res, next) => {
                 res.redirect('/')
                 const msg = {
                     to: req.body.email,
-                    from: 'moalzoabi@outlook.com',
+                    from: 'Your Email Here',
                     subject: 'Password Reset',
                     html: `
                     <p> Password Reset Request <p>
